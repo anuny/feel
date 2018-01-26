@@ -20,6 +20,10 @@ preventTab:function(event){
 	if (event.which === 9) event.preventDefault()
 },
 run:function(){
+	
+	var tests = "😀,😃,😄,😁,😆,😅,😂,😊,😇,🙂,🙃,😉,😌,😍,😘,😗,😙,😚,😋,😜,😝,😛,🤑,🤗,🤓,😎,😏,😒,😞,😔,😟,😕,🙁,,😣,😖,😫,😩,😤,😠,😡,😶,😐,😑,😯,😦,😧,😮,😲,😵,😳,😱,😨,😰,😢,😥,😭,😓,😪,😴,🙄,🤔,😬,🤐".split(',');
+	console.log(tests)
+	
 	var actionbar = document.createElement('div')
 	actionbar.className = this.options.classes.actionbar;
 	var element = this.options.element;

@@ -105,8 +105,8 @@ actions: function(options) {
 			icon: '🌝',
 			title: '表情',
 			result: function() {
-				var url = window.prompt('Enter the image URL');
-				if (url) self.exec('insertImage', url)
+				var face ='🌝';
+				if (face) self.exec('insertText', face)
 			}
 		}
 	}
