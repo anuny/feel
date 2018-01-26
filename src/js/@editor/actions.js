@@ -1,4 +1,4 @@
-actions: function(options) {
+_actions: function(options) {
 	var self = this;
 	return {
 		bold: {

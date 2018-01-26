@@ -65,22 +65,36 @@
 const editor = feel({
   element: document.getElementById('pell'),
   placeholder:'Feel Editor',
-  onChange: html => {
-    document.getElementById('text-output').innerHTML = html
-    document.getElementById('html-output').textContent = html
-  },
   styleWithCSS: false,
-  classes: {
-    actionbar: 'pell-actionbar-custom-name',
-    button: 'pell-button-custom-name',
-    content: 'pell-content-custom-name'
+  focus:true,
+  defaultContent:'<b>Feel Editor</b>',
+  uiClass: {
+    actionbar: 'feel-actionbar',
+    button: 'feel-button',
+    content: 'feel-content'
+  },
+  actions:{
   }
 })
 
-// editor.content<HTMLElement>
-// To change the editor's content:
+editor.on('change',function(html){
+	document.getElementById('text-output').innerHTML = html
+    document.getElementById('html-output').textContent = html
+})
 
-//editor.content.innerHTML = '<b>fell editor</b>'
+editor.on('save',function(html){
+
+})
+
+editor.on('focus',function(a){
+	console.log('focus')
+})
+
+editor.on('blur',function(){
+	console.log('blur')
+})
+
+console.log(editor)
 
 </script>
 </body>
