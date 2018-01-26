@@ -22,8 +22,6 @@ preventTab:function(event){
 run:function(){
 	
 	var tests = "😀,😃,😄,😁,😆,😅,😂,😊,😇,🙂,🙃,😉,😌,😍,😘,😗,😙,😚,😋,😜,😝,😛,🤑,🤗,🤓,😎,😏,😒,😞,😔,😟,😕,🙁,,😣,😖,😫,😩,😤,😠,😡,😶,😐,😑,😯,😦,😧,😮,😲,😵,😳,😱,😨,😰,😢,😥,😭,😓,😪,😴,🙄,🤔,😬,🤐".split(',');
-	console.log(tests)
-	
 	var actionbar = document.createElement('div')
 	actionbar.className = this.options.classes.actionbar;
 	var element = this.options.element;
@@ -32,6 +30,7 @@ run:function(){
 	element.content = document.createElement('div')
 	element.content.contentEditable = true;
 	element.content.spellcheck= false
+	element.content.setAttribute('placeholder',this.options.placeholder||'')
 	
 	
 	element.content.className = this.options.classes.content
@@ -58,6 +57,8 @@ run:function(){
 
 
   if (this.options.styleWithCSS) this.exec('styleWithCSS');
+  
+  this.content  = element.content;
   actionbar = null;
   
 
