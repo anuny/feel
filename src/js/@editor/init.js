@@ -70,7 +70,7 @@ run:function(){
 		var keyCode = event.which;
 		var isBack = keyCode==8;
 		var isDel = keyCode==46;
-		
+		var isTab = keyCode==9;
 		
 		if(isBack || isDel){
 			var _text = element.content.innerText;
