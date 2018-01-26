@@ -1,0 +1,27 @@
+{
+  "name": "feel",
+  "version": "0.0.1",
+  "description": "editor",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "promise",
+	"then"
+  ],
+  "author": "Anuny",
+  "license": "MIT",
+  "fute": {
+    "port": 3000,
+    "watch": true,
+    "openBrowser": false,
+    "reloadBrowser": true,
+    "src": "src",
+    "dist": "dist",
+    "statics": "static",
+    "filter": "@",
+    "minifix": ".mini",
+    "ext": {
+	  "title":"test"
+	}
+  }
+}
